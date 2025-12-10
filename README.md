@@ -14,9 +14,10 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Software – Quartus prime**
 
-**Theory**
 
-**Logic Diagram**
+**Truth table**
+![Truth table](https://github.com/user-attachments/assets/d918c739-5dcf-4aa3-b4cc-561bce96ed2d)
+
 
 **Procedure**
 
@@ -35,12 +36,12 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
 
-module exp2(a,b,c,d,f1,w,x,y,z,f2);
+module as2 (a,b,c,d,w,x,y,z,f1,f2);
 input a,b,c,d,w,x,y,z;
 output f1,f2;
-assign f1=((~b&~d)| (~a&b&d)| (a&b&~c));
-assign f2=((~y&z)|(x&y)|(w&y));
-endmodule 
+assign f1 = ~a&~b&~c&~d | a&~c&~d | ~b&c&~d | ~a&b&c&d | b&~c&d;
+assign f2 = x&~y&z | ~x&~y&z | ~w&x&y | w&~x&y | w&x&y;
+endmodule
 
 Developed by: AMSAVARADHAN M 
 
@@ -48,10 +49,11 @@ RegisterNumber:25011322
 
 
 **RTL realization**
-<img width="1452" height="995" alt="388818050-ea817c83-7e85-4640-8911-f60fdca9e002" src="https://github.com/user-attachments/assets/add17927-0c59-4c2e-90b6-7f6cc479e241" />
+<img width="1920" height="1080" alt="Screenshot 2025-11-20 142704" src="https://github.com/user-attachments/assets/4b29a008-111d-4f7c-a2f6-e5396b9c5d12" />
+
 
 **RTL**
-<img width="1921" height="1201" alt="388818646-5c6f025f-7632-4952-98fe-b057294c40b1" src="https://github.com/user-attachments/assets/4be6f409-06b3-4c43-a76f-11d307d68513" />
+<img width="1920" height="1080" alt="Screenshot 2025-11-20 152218" src="https://github.com/user-attachments/assets/875c81d0-3777-4d15-9427-bfb5c535cc48" />
 
 
 **Result:**
